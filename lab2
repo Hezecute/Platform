@@ -1,0 +1,49 @@
+#include <iostream>
+#include <filesystem>
+#include <vector>
+
+namespace fs = std::filesystem;
+
+void displayMenu();
+void listFiles();
+void createDirectory();
+void changeDirectory();
+
+int main() {
+	int choice;
+	do{
+		displayMenu();
+		
+		std::cout << "Enter the number : ";
+		std::cin >> choice;
+		
+		switch (choice){
+			case 1:
+				listFiles();
+				break;
+			case 2:
+				createDirectory();
+				break;
+			case 3 :
+				changeDirectory();
+			case 4:
+				std:: cout <<"Existing...\n";
+				return 0;
+			defult :
+				std:: cout<< "Invalid option, Please try again. \n";						 	
+		}				
+		
+	}while (choice ! = 4);
+		
+	return 0;
+}
+	void displayMenu (){
+		std ::cout<< "\n \t\t\tMAIN MENU \n\t\t---------------\n";
+		std ::cout<<" 1. display list of File \n ";
+		std ::cout<<" 2. create New Directory \n ";
+		std ::cout <<" 3. change the working Directory \n";
+		std ::cout << " 4. Exit \n ";
+	}
+
+void listFiles()
+	
